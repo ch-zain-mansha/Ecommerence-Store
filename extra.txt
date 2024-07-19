@@ -1,0 +1,4 @@
+ localStorage.removeItem('cartItems');
+        localStorage.removeItem('cartTotal');
+
+d818eb14-74f4-4541-afae-0001de30c013

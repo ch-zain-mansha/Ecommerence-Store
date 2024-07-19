@@ -1,0 +1,20 @@
+{
+  "name": "ecommerence-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express.js": "^1.0.0",
+    "nodemon": "^3.1.4",
+    "stripe": "^16.2.0",
+    "twilio": "^5.2.2"
+  }
+}
