@@ -1,78 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pay Now</title>
-    <link rel="stylesheet" href="css/payNow.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Cash on Delivery Form</title>
+    <link rel="stylesheet" href="css/payNow.css"> <!-- Assuming your CSS is saved as styles.css -->
 </head>
-
 <body>
-    <nav>
-        <a href="./index.html" class="logo poppins-black-italic">Ecommerce</a>
-        <i class="ri-handbag-line basket" data-quantity="0" id="cart-icon"></i>
-        <div class="cart">
-            <i class="ri-close-line x"></i>
-            <h4 class="cart-title">Your Cart</h4>
-            <div class="product-cart-content"></div>
-            <div class="cart-line"></div>
-            <div class="total-price">
-                <h4>Total: PKR 0.00</h4>
-            </div>
-           <a href="" class="pay-now-link"> <div class="pay-now">Pay Now</div></a>
-        </div>
-    </nav>
-    <div class="container">
-        <h1>Choose Your Payment Method</h1>
-
-        <!-- Online Bank Payments -->
-        <div class="payment-option">
-            <h2>Online Bank Payments</h2>
-            <p>
-                <label>
-                    <input type="radio" name="payment-method" value="easypaisa">
-                    Easypaisa
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="radio" name="payment-method" value="jazzcash">
-                    JazzCash
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="radio" name="payment-method" value="upaisa">
-                    Upaisa
-                </label>
-            </p>
-        </div>
-
+    <form class="contact-form" id="codForm" action="https://api.web3forms.com/submit" method="POST">
+        <h1>Cash on Delivery</h1>
+        <input type="hidden" name="access_key" value="d818eb14-74f4-4541-afae-0001de30c013">
         
-
-        <!-- Cash on Delivery -->
-        <div class="payment-option">
-            <h2>Cash on Delivery</h2>
-            <p>Select this option if you prefer to pay in cash when your order is delivered.</p>
-            <p>
-                <label>
-                    <input type="radio" name="payment-method" value="cod">
-                    Cash on Delivery
-                </label>
-            </p>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
         </div>
-
-        <!-- Submit Button -->
-        <div style="text-align: center;">
-            <a href="#" id="submit"><button onclick="submitPayment()" class="submit-payment">Submit Payment</button></a>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
         </div>
-    </div>
-
+        <div class="form-group">
+            <label for="city">City</label>
+            <select id="city" name="city" required>
+                <option value="" disabled selected>Select your city</option>
+                <option value="karachi">Karachi</option>
+                <option value="lahore">Lahore</option>
+                <option value="islamabad">Islamabad</option>
+                <option value="rawalpindi">Rawalpindi</option>
+                <option value="faisalabad">Faisalabad</option>
+                <option value="multan">Multan</option>
+                <option value="peshawar">Peshawar</option>
+                <option value="quetta">Quetta</option>
+                <option value="gujranwala">Gujranwala</option>
+                <option value="sialkot">Sialkot</option>
+                <option value="bahawalpur">Bahawalpur</option>
+                <option value="sargodha">Sargodha</option>
+                <option value="sheikhupura">Sheikhupura</option>
+                <option value="jhang">Jhang</option>
+                <option value="dera ghazi khan">Dera Ghazi Khan</option>
+                <option value="swat">Swat</option>
+                <!-- Add more cities as needed -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="district">District</label>
+            <select id="district" name="district" required>
+                <option value="" disabled selected>Select your district</option>
+                <!-- Punjab -->
+                <option value="lahore">Lahore</option>
+                <option value="faisalabad">Faisalabad</option>
+                <option value="multan">Multan</option>
+                <option value="rawalpindi">Rawalpindi</option>
+                <option value="gujranwala">Gujranwala</option>
+                <option value="sialkot">Sialkot</option>
+                <option value="bahawalpur">Bahawalpur</option>
+                <option value="sargodha">Sargodha</option>
+                <option value="sheikhupura">Sheikhupura</option>
+                <option value="jhang">Jhang</option>
+                <!-- Sindh -->
+                <option value="karachi">Karachi</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="sukkur">Sukkur</option>
+                <option value="larkana">Larkana</option>
+                <option value="nawabshah">Nawabshah</option>
+                <option value="mirpurkhas">Mirpurkhas</option>
+                <!-- Khyber Pakhtunkhwa -->
+                <option value="peshawar">Peshawar</option>
+                <option value="mardan">Mardan</option>
+                <option value="dera ismail khan">Dera Ismail Khan</option>
+                <option value="abbottabad">Abbottabad</option>
+                <option value="kohat">Kohat</option>
+                <option value="swat">Swat</option>
+                <!-- Balochistan -->
+                <option value="quetta">Quetta</option>
+                <option value="sibi">Sibi</option>
+                <option value="turbat">Turbat</option>
+                <option value="zhob">Zhob</option>
+                <option value="mastung">Mastung</option>
+                <!-- Islamabad -->
+                <option value="islamabad">Islamabad</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Seller Name</label>
+            <input type="text" id="seller-name" name="seller-name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="product-names">Product Names</label>
+            <input type="text" id="product-names" name="product-names" readonly>
+        </div>
+    
+        <div class="form-group">
+            <label for="product-sizes">Product Sizes</label>
+            <input type="text" id="product-sizes" name="product-sizes" readonly>
+        </div>
+    
+        <div class="form-group">
+            <label for="product-quantities">Product Quantities</label>
+            <input type="text" id="product-quantities" name="product-quantities" readonly>
+        </div>
+    
+        <div class="form-group">
+            <label for="product-prices">Product Prices</label>
+            <input type="text" id="product-prices" name="product-prices" readonly>
+        </div>
+    
+        <div class="total-price">
+            Total: PKR <span id="total-price">0</span>
+        </div>
+    
+        <button type="submit" class="submit-button">Place Order</button>
+    </form>
+    
+    <script src="script/payNow.js"></script> <!-- Ensure the path is correct -->
 </body>
-<script src="script/payNow.js"></script>
-<script src="script/script.js"></script>
 </html>

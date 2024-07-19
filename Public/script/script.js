@@ -36,13 +36,14 @@ function addCartClicked(event) {
     const productTitle = shopProduct.getElementsByClassName("product-title")[0].innerText;
     const productPrice = shopProduct.getElementsByClassName("product-price")[0].innerText;
     const productImg = shopProduct.getElementsByClassName("product-img")[0].src;
-    addProductToCart(productTitle, productPrice, productImg);
+    const productSize = shopProduct.querySelector("select").value; // Get the selected size
+    addProductToCart(productTitle, productPrice, productImg, productSize);
     updateTotal();
     saveCartItems();
     updateCartIcon();
 }
 
-function addProductToCart(productTitle, productPrice, productImg) {
+function addProductToCart(productTitle, productPrice, productImg, productSize) {
     var cartItems = document.getElementsByClassName("product-cart-content")[0];
     var cartItemsNames = cartItems.getElementsByClassName("product-title");
 
@@ -63,6 +64,7 @@ function addProductToCart(productTitle, productPrice, productImg) {
         <div class="cart-product-detail">
             <h5 class="product-title">${productTitle}</h5>
             <h5 class="price">${productPrice}</h5>
+            <p class="product-size">Size: ${productSize}</p> <!-- Display selected size -->
             <input type="number" class="product-quantity" min="1" value="1"/>
         </div>
         <div class="delete-product-cart">
@@ -126,12 +128,14 @@ function saveCartItems() {
         var priceElement = cartBox.getElementsByClassName('price')[0];
         var quantityElement = cartBox.getElementsByClassName('product-quantity')[0];
         var imgElement = cartBox.getElementsByClassName('cart-img')[0].src;
+        var sizeElement = cartBox.getElementsByClassName('product-size')[0].innerText.replace('Size: ', '');
 
         var item = {
             title: titleElement.innerText,
             price: priceElement.innerText,
             quantity: quantityElement.value,
             image: imgElement,
+            size: sizeElement, // Save the size
         };
         cartItems.push(item);
     }
@@ -144,7 +148,7 @@ function loadCartItems() {
         cartItems = JSON.parse(cartItems);
         for (var i = 0; i < cartItems.length; i++) {
             var item = cartItems[i];
-            addProductToCart(item.title, item.price, item.image);
+            addProductToCart(item.title, item.price, item.image, item.size);
             var cartBoxes = document.getElementsByClassName('card_boxes');
             var cartBox = cartBoxes[cartBoxes.length - 1];
             var quantityElement = cartBox.getElementsByClassName('product-quantity')[0];
@@ -168,27 +172,19 @@ function updateCartIcon() {
 }
 
 function checkout() {
-    
     var cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
-  
     if (cartItems.length === 0) {
         alert("Your cart is empty. Please add items before checking out.");
         return;
     }
 
-  
     var confirmation = confirm("Proceed to checkout?");
-
     if (confirmation) {
-       
-var elements = document.getElementsByClassName('pay-now-link');
-
-
-for (var i = 0; i < elements.length; i++) {
-    elements[i].setAttribute("href", "./payNow.html");
-}
-
+        var elements = document.getElementsByClassName('pay-now-link');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].setAttribute("href", "./payNow.html");
+        }
 
         const cart = document.querySelector('.cart');
         cart.classList.remove('cart-active');
