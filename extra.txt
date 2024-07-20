@@ -1,1 +1,114 @@
-TRACKSUIT - Power printed Summer Printed Tracksuit For Men & Boys - Soft & Comfortable Fabric Trouser & tshirts for men
+ <!-- Product 3 -->
+            <div class="product-box">
+                <img src="https://static-01.daraz.pk/p/4907ebaf40b3474e10528eddebeecdde.jpg_750x750.jpg_.webp" alt="Track Suit" class="product-img">
+                <h1 class="product-title">Power printed Summer Tracksuit</h1>
+                <p>TRACKSUIT - Power printed Summer Printed Tracksuit For Men & Boys - Soft & Comfortable Fabric Trouser & tshirts for men</p>
+                <div class="size-dropdown">
+                    <label for="size-select3">Size:</label>
+                    <select id="size-select3">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="xlarge">X-Large</option>
+                    </select>
+                </div>
+                <div class="product-price-cart">
+                    <h6 class="product-price">PKR 2300</h6>
+                    <i class="ri-shopping-basket-line bag"></i>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-box">
+                <img src="https://static-01.daraz.pk/p/a00e7e74a08367b455e239e0b8c41bdf.jpg_750x750.jpg_.webp" alt="Track Suit" class="product-img">
+                <h1 class="product-title">CR7 Printed Amazing Tracksuit</h1>
+                <p>Tracksuit Men's New CR7 Printed Amazing Smart Fit White T-Shirts And Black Shorts Soft & Comfy Fabric For Men And Boys-Copy</p>
+                <div class="size-dropdown">
+                    <label for="size-select4">Size:</label>
+                    <select id="size-select4">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="xlarge">X-Large</option>
+                    </select>
+                </div>
+                <div class="product-price-cart">
+                    <h6 class="product-price">PKR 2600</h6>
+                    <i class="ri-shopping-basket-line bag"></i>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-box">
+                <img src="https://static-01.daraz.pk/p/3b2039be3f12cabb8150482b4b154eb7.jpg_750x750.jpg_.webp" alt="Track suit" class="product-img">
+                <h1 class="product-title">The boys printed summer tracksuit</h1>
+                <p>Black The boys printed summer tracksuit for men round neck half sleeves tshirt&trouser for men& boys best article of summer collection - T shirt for Men - Trouser for Men</p>
+                <div class="size-dropdown">
+                    <label for="size-select5">Size:</label>
+                    <select id="size-select5">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="xlarge">X-Large</option>
+                    </select>
+                </div>
+                <div class="product-price-cart">
+                    <h6 class="product-price">PKR 2200</h6>
+                    <i class="ri-shopping-basket-line bag"></i>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-box">
+                <img src="https://static-01.daraz.pk/p/6d4da717ee9953428a2348e41029001c.jpg_750x750.jpg_.webp" alt="Track Suit" class="product-img">
+                <h1 class="product-title">Vertical Strip Printed Tracksuit</h1>
+                <p>Amazing Tracksuit For Men Vertical Strip Printed Cotton Half Sleeves O Neck Trendy T Shirt And Short For Summer wear</p>
+                <div class="size-dropdown">
+                    <label for="size-select6">Size:</label>
+                    <select id="size-select6">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="xlarge">X-Large</option>
+                    </select>
+                </div>
+                <div class="product-price-cart">
+                    <h6 class="product-price">PKR 2000</h6>
+                    <i class="ri-shopping-basket-line bag"></i>
+                </div>
+            </div>
+            <!-- Product 7 -->
+            <div class="product-box">
+                <img src="https://static-01.daraz.pk/p/43a9724a6530b95d2ec33d6c7b5d5fb1.png_750x750.jpg_.webp" alt="Track Suit" class="product-img">
+                <h1 class="product-title">Lion face printed summer tracksuit</h1>
+                <p>Black Tracksuit side lion face printed summer track Men's Clothing Summer Breathable T-Shirt and Black Shorts Gym wear and comfortable</p>
+                <div class="size-dropdown">
+                    <label for="size-select7">Size:</label>
+                    <select id="size-select7">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="xlarge">X-Large</option>
+                    </select>
+                </div>
+                <div class="product-price-cart">
+                    <h6 class="product-price">PKR 2000</h6>
+                    <i class="ri-shopping-basket-line bag"></i>
+                </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="product-box">
+                <img src="https://pk-live-21.slatic.net/kf/S15a05cc576274be481e187de08f8a02fp.jpg_750x750.jpg_.webp" alt="Track Suit" class="product-img">
+                <h1 class="product-title">Astarya printed white tracksuit</h1>
+                <p>Astarya printed white tracksuit for men's</p>
+                <div class="size-dropdown">
+                    <label for="size-select8">Size:</label>
+                    <select id="size-select8">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="xlarge">X-Large</option>
+                    </select>
+                </div>
+                <div class="product-price-cart">
+                    <h6 class="product-price">PKR 2300</h6>
+                    <i class="ri-shopping-basket-line bag"></i>
+                </div>
+            </div>

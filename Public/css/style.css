@@ -307,7 +307,7 @@ nav {
         padding: 20px 200px;
     }
     .cart {
-        width: 250px;
+        width: 100%;
     }
 }
 
@@ -316,7 +316,7 @@ nav {
         padding: 20px 100px;
     }
     .cart {
-        width: 200px;
+        width: 100%;
     }
 }
 
@@ -331,7 +331,7 @@ nav {
         font-size: 24px;
     }
     .cart {
-        width: 180px;
+        width: 100%;
     }
 }
 
@@ -346,7 +346,7 @@ nav {
         font-size: 22px;
     }
     .cart {
-        width: 280px;
+        width: 100%;
      margin-right: -2px;
     }
 }
@@ -363,7 +363,7 @@ nav {
     }
     .cart {
         right: -100%;
-        width: 280px;
+        width: 100%;
     }.cart-active{
 
         right: 0px;
