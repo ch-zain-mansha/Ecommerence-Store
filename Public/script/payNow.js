@@ -8,11 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
         let totalPrice = 0;
 
         cart.forEach(item => {
-            productNames.push(item.title || 'N/A'); // Default to 'N/A' if title is missing
-            productSizes.push(item.size || 'N/A');  // Default to 'N/A' if size is missing
-            productQuantities.push(item.quantity || '0'); // Default to '0' if quantity is missing
-            productPrices.push(item.price || '0'); // Default to '0' if price is missing
-
+            productNames.push(item.title || 'N/A');
+            productSizes.push(item.size || 'N/A');
+            productQuantities.push(item.quantity || '0');
+            productPrices.push(item.price || '0');
             totalPrice += (item.quantity || 0) * parseFloat((item.price || '0').replace('PKR ', ''));
         });
 
@@ -38,12 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fetch cart data from localStorage and populate form
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    console.log('Cart Items:', cartItems); // Debugging line to check cart items
+    console.log('Cart Items:', cartItems);
 
     if (cartItems.length > 0) {
         populateFormWithCartData(cartItems);
     } else {
-        console.warn('No cart items found'); // Debugging line to handle empty cart
+        console.warn('No cart items found');
     }
 
     // Form submission handling
@@ -63,13 +62,25 @@ document.addEventListener('DOMContentLoaded', function() {
             if (response.ok) {
                 alert('Order placed successfully!');
                 form.reset();
-                localStorage.removeItem('cartItems'); // Clear cart after order is placed
+                localStorage.removeItem('cartItems');
+                window.location.href = 'success.html'; // Redirect to home page
+
+                var elements = document.getElementsByClassName('back-to-home');
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].setAttribute("href", "./success.html");
+                }
             } else {
                 response.json().then(data => {
                     if (data.errors) {
                         alert(data.errors.map(error => error.message).join(", "));
                     } else {
                         alert('There was an error placing your order. Please try again.');
+                        window.location.href = 'cancel.html'; // Redirect to home page
+
+                var elements = document.getElementsByClassName('back-to-home');
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].setAttribute("href", "./cancel.html");
+                }
                     }
                 });
             }

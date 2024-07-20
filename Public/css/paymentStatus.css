@@ -61,6 +61,7 @@ body {
     border-radius: 20px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    margin-left: -27px;
 }
 
 .back-to-home:hover {

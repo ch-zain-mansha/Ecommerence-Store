@@ -4,8 +4,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
 .contact-form {
@@ -16,7 +14,7 @@ body {
     max-width: 500px;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 20px;
+    margin-left: 33%;
 }
 
 .contact-form h1 {
@@ -74,6 +72,7 @@ body {
 @media (max-width: 600px) {
     .contact-form {
         padding: 15px;
+        margin-left: 0px;
     }
 
     .contact-form h1 {

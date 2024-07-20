@@ -36,7 +36,7 @@ function addCartClicked(event) {
     const productTitle = shopProduct.getElementsByClassName("product-title")[0].innerText;
     const productPrice = shopProduct.getElementsByClassName("product-price")[0].innerText;
     const productImg = shopProduct.getElementsByClassName("product-img")[0].src;
-    const productSize = shopProduct.querySelector("select").value; // Get the selected size
+    const productSize = shopProduct.querySelector("select").value; 
     addProductToCart(productTitle, productPrice, productImg, productSize);
     updateTotal();
     saveCartItems();
